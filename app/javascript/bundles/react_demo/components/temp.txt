@@ -1,0 +1,39 @@
+import React, { Component } from "react";
+import PropTypes from 'prop-types';
+import SwiperTop from './SwiperTop';
+import SwipeableViews from 'react-swipeable-views';
+import SwiperMain from './SwiperMain';
+import fixtures from './fixtures';
+
+class IssuesSwiper extends React.Component {
+    state = {
+        index: 0,
+    };
+
+    handleChangeIndex = index => {
+        this.setState({ index });
+    };
+
+    render() {
+        const { index } = this.state;
+        return (
+            <SwipeableViews enableMouseEvents index={index} onChangeIndex={this.handleChangeIndex}>
+                {fixtures.map((fixtures, currentIndex) => {
+                    return (
+                        <div key={String(currentIndex)}>
+                            <SwiperTop fixtures={fixtures} />
+                            <SwiperMain fixtures={fixtures} />
+                        </div>
+                    );
+                })}
+            </SwipeableViews>
+        );
+    }
+}
+IssuesSwiper.propTypes = {
+    active: PropTypes.bool.isRequired,
+    index: PropTypes.number.isRequired,
+    onClick: PropTypes.func.isRequired,
+};
+export default IssuesSwiper;
+
