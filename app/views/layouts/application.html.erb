@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ReactDemos</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>ReactDemos</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <%= javascript_pack_tag 'react-demo' %>
-
-  </head>
-
-  <body>
+  <%= javascript_pack_tag 'react-demo' %>
+</head>
+<body>
+<div class="container">
+  <div class="content">
     <%= yield %>
-  </body>
+  </div>
+</div>
+</body>
 </html>

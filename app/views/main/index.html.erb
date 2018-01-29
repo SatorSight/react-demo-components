@@ -1,1 +1,7 @@
-<%= react_component('IssuesSwiper', props: @props, prerender: false) %>
+<ul>
+  <% @components.each do |component| %>
+    <li>
+      <a target="_blank" href="/component/<%= component %>/"><%= component %></a>
+    </li>
+  <% end %>
+</ul>
