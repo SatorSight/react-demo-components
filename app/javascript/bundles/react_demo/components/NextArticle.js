@@ -123,6 +123,4 @@ class NextArticle extends React.Component {
         return <div>{content}</div>;
     }
 }
-
-
 export default NextArticle;

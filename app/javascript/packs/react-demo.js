@@ -6,7 +6,7 @@ import NextArticle from '../bundles/react_demo/components/NextArticle';
 
 ReactOnRails.register({
     IssuesSwiper,
-    PopularArticles,
     NextArticle,
+    PopularArticles,
     OtherIssues
 });
