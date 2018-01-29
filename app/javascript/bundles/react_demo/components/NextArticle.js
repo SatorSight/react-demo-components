@@ -9,7 +9,7 @@ const styles = {
     },
     inner: {
         width: '100%',
-        maxWidth: '40em',
+        maxWidth: '34em',
         position: 'relative',
         zIndex: 20,
     },
@@ -25,7 +25,7 @@ const styles = {
     imgBg: {
         zIndex: 10,
         position: 'absolute',
-        top: '-20%',
+        top: '-50%',
         right: 0,
         width: '100%',
         opacity: '0.3'
@@ -46,7 +46,7 @@ const styles = {
         boxShadow: 'rgba(0, 0, 0, 0.5) 0.1em 0.1em 0.3em',
         borderRadius: '0.2em',
         float: 'left',
-        maxWidth: '20%',
+        maxWidth: '23%',
         margin: '-1em 2.5em 0',
     },
     magLeft: {
@@ -66,21 +66,21 @@ const styles = {
         maxWidth: '50%',
     },
     title: {
-        fontSize: '1em',
+        fontSize: '0.9em',
         textTransform: 'uppercase',
         fontFamily: 'HelveticaNeueCyr, sans-serif',
         fontWeight: 400,
         letterSpacing: 2,
         color: '#fff',
-        marginBottom: '1em',
+        marginBottom: '1.5em',
     },
     logo: {
-        maxHeight: '2em',
+        maxHeight: '2.2em',
         marginBottom: '0.8em',
         width: 'auto',
     },
     date: {
-        fontSize: '0.9em',
+        fontSize: '0.8em',
         fontFamily: 'HelveticaNeueCyr, sans-serif',
         fontWeight: 400,
         letterSpacing: 2,
