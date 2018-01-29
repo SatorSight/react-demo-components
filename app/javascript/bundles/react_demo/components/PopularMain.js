@@ -57,7 +57,7 @@ class PopularMain extends React.Component {
 
     render() {
         return (
-            <SwipeableViews style={styles.swiper} enableMouseEvents index={this.props.active} onChangeIndex={this.props.changer} onSwitching={this.props.changer}>
+            <SwipeableViews style={styles.swiper} enableMouseEvents index={this.props.active} onSwitching={this.props.changer}>
                 {this.props.fixtures.map((fixture, index) =>
                     <div style={styles.item} key={index}>
                         <div style={styles.mask} />
