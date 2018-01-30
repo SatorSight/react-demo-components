@@ -114,7 +114,7 @@ const styles = {
         right: 0,
         bottom: 0,
         top: 0,
-        background: 'url("images/mask.png") no-repeat 50% 50%',
+        background: 'url("/images/mask.png") no-repeat 50% 50%',
         backgroundSize: 'cover',
         zIndex: 10,
     },
