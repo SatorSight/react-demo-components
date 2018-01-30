@@ -5,7 +5,9 @@ import fixtures from './fixtures';
 const styles = {
     issuesSwiper: {
         backgroundColor: '#F5F5F5',
+        maxWidth: '720px',
         overflow: 'hidden',
+        margin: '0 auto',
         position: 'relative',
     },
     over: {
