@@ -59,6 +59,7 @@ const styles = {
         display: 'block',
         overflow: 'hidden',
         textDecoration: 'none',
+        paddingBottom: 1,
     },
     right: {
         overflow: 'hidden',
