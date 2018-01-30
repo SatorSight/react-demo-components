@@ -11,6 +11,8 @@ const styles = {
         backgroundColor: '#000',
         position: 'relative',
         overflow: 'hidden',
+        maxWidth: '720px',
+        margin: '0 auto',
     },
 };
 

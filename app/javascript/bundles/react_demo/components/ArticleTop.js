@@ -46,7 +46,7 @@ const styles = {
         left: 0,
         bottom: 0,
         overflow: 'hidden',
-        background: 'url("images/article/mask.png") no-repeat 50% 100%',
+        background: 'url("./images/article/mask.png") no-repeat 50% 100%',
         backgroundSize: 'cover',
     },
     left: {

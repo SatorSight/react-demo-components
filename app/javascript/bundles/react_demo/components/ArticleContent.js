@@ -62,7 +62,7 @@ const styles = {
         fontFamily: 'HelveticaNeueCyr, sans-serif',
         textTransform: 'uppercase',
         borderRadius: '3em',
-        background: 'url(images/like.png) no-repeat 1.2em 50% #FFF',
+        background: 'url(./images/like.png) no-repeat 1.2em 50% #FFF',
         backgroundSize: '1.4em auto',
         margin: '1em 0 0',
         padding: '0.2em 1.5em 0 3.5em',

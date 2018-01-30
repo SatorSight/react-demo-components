@@ -23,14 +23,11 @@ const theme = createMuiTheme({
 const styles = {
     button: {
         display: 'block',
-        minWidth: 46,
-        padding: '15px 14px',
+        minWidth: '3.4em',
+        padding: '1.2em 1em',
     },
     list: {
         width: 250,
-        color: '#FFF',
-    },
-    listitem: {
         color: '#FFF',
     },
     listFull: {
@@ -38,11 +35,11 @@ const styles = {
     },
     line: {
         width: '100%',
-        height: 2,
+        height: 1.5,
         backgroundColor: '#FFF',
-        borderRadius: 3,
+        borderRadius: '0.3em',
         display: 'block',
-        margin: '2px auto',
+        margin: '0.3em auto',
     },
 };
 
