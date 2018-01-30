@@ -11,6 +11,10 @@ const styles = {
         backgroundColor: '#000',
         position: 'relative',
         overflow: 'hidden',
+    },
+    inner: {
+        width: '100%',
+        overflow: 'hidden',
         maxWidth: '720px',
         margin: '0 auto',
     },
