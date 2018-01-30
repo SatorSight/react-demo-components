@@ -85,7 +85,7 @@ class ArticleContent extends React.Component {
             <div style={styles.item} key={ArticleContent}>
                 <div style={styles.maskImg}>
                     <a style={styles.urlImg} href="#11">
-                        <img style={styles.img} src="images/11.jpg" alt="" />
+                        <img style={styles.img} src="/images/11.jpg" alt="" />
                     </a>
                 </div>
                 <div style={styles.inner}>
@@ -96,7 +96,7 @@ class ArticleContent extends React.Component {
                     <p style={styles.titleImg}>1. Екатерина Котаро, г. Щадринск</p>
                     <div style={styles.innerImg}>
                         <a style={styles.urlImg} href="#1">
-                            <img style={styles.img} src="images/1.jpg" alt="" />
+                            <img style={styles.img} src="/images/1.jpg" alt="" />
                         </a>
                     </div>
                 </div>
