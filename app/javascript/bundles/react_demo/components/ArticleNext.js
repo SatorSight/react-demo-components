@@ -39,7 +39,7 @@ const styles = {
         left: 0,
         bottom: 0,
         overflow: 'hidden',
-        background: 'url("./images/next.png") no-repeat 50% 50%',
+        background: 'url("/images/next.png") no-repeat 50% 50%',
         backgroundSize: 'cover',
     },
     left: {
