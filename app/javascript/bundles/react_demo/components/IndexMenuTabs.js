@@ -19,7 +19,7 @@ const styles = {
         fontWeight: 200,
         color: '#FFF',
         letterSpacing: '0.3em',
-        padding: '1em 0',
+        padding: '1em 0 0.8em',
         height: '5em',
         fontSize: '1.2em',
     },
