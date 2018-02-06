@@ -6,6 +6,7 @@ const styles = {
     header: {
         width: '100%',
         position: 'relative',
+        backgroundColor: '#000',
     },
     mask: {
         position: 'absolute',
@@ -100,7 +101,6 @@ class IndexHeader extends Component {
                         <IndexMenu />
                     </div>
                     <h1 style={styles.h1}>киоск плюс<span style={styles.arrow} /></h1>
-                    <p>по попопулярности</p>
                     <div style={styles.item}>
                         {/*{fixtures.map(fixture =>*/}
                             {/*<div style={styles.item} key={fixture.id}>*/}
