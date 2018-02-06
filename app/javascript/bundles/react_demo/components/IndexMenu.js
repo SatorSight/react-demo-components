@@ -2,9 +2,6 @@ import React from 'react';
 import { MuiThemeProvider, withStyles, createMuiTheme } from 'material-ui/styles';
 import Drawer from 'material-ui/Drawer';
 import Button from 'material-ui/Button';
-import List from 'material-ui/List';
-import Divider from 'material-ui/Divider';
-import { mailFolderListItems, otherMailFolderListItems } from './tileData';
 import IndexMenuTabs from './IndexMenuTabs';
 
 const theme = createMuiTheme({
@@ -106,7 +103,10 @@ const styles = {
 
 class IndexMenu extends React.Component {
     state = {
+        top: false,
         left: false,
+        bottom: false,
+        right: false,
     };
 
     toggleDrawer = (side, open) => () => {
@@ -121,12 +121,12 @@ class IndexMenu extends React.Component {
         return (
             <MuiThemeProvider theme={theme}>
                 <div>
-                    <Button color="primary" className={classes.button} aria-label="open drawer" onClick={this.toggleDrawer('left', true)}>
+                    <Button color="primary" className={classes.button} onClick={this.toggleDrawer('left', true)}>
                         <span className={classes.line} />
                         <span className={classes.line} />
                         <span className={classes.line} />
                     </Button>
-                    <Drawer variant="persistent" classes={{ paper: classes.drawerPaper, }} open={this.state.left}>
+                    <Drawer classes={{ paper: classes.drawerPaper, }} open={this.state.left} onClose={this.toggleDrawer('left', false)}>
                         <div>
                             <div className={classes.top}>
                                 <div className={classes.closet} onClick={this.toggleDrawer('left', false)}>
