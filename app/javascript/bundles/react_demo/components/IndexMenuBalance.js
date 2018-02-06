@@ -91,7 +91,7 @@ class IndexMenuTabs extends Component {
                         <span style={styles.arrowBot} />
                     </Tabs>
 
-                    <SwipeableViews animateHeight enableMouseEvents index={index} onChangeIndex={this.handleChangeIndex}>
+                    <SwipeableViews enableMouseEvents index={index} onChangeIndex={this.handleChangeIndex}>
                         <IndexMenuShowcase />
                         <IndexMenuBalance />
                         <IndexMenuSettings />
