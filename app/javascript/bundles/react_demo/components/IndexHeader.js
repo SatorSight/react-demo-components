@@ -83,7 +83,7 @@ const styles = {
         position: 'absolute',
         left: 0,
         top: '50%',
-        marginTop: '-2.1em',
+        marginTop: '-1.8em',
         zIndex: 50,
     },
 };
