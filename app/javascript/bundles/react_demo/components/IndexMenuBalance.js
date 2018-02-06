@@ -61,7 +61,7 @@ const styles = {
         position: 'relative',
         width: '90%',
         background: 'linear-gradient(to bottom, rgba(153,153,153,1) 0%, rgba(153,153,153,0) 100%)',
-        backgroundClip: 'text',
+        webkitBackgroundClip: 'text',
         webkitTextFillColor: 'transparent',
     },
 };
