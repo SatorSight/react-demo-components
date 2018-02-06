@@ -6,7 +6,7 @@ import List from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 import { mailFolderListItems, otherMailFolderListItems } from './tileData';
 import IndexMenuTabs from './IndexMenuTabs';
-const drawerWidth = 240;
+
 const theme = createMuiTheme({
     palette: {
         type: 'dark',
@@ -19,21 +19,7 @@ const theme = createMuiTheme({
         },
     },
 });
-
 const styles = {
-    appBarShift: {
-        width: `calc(100% - ${drawerWidth}px)`,
-        transition: theme.transitions.create(['margin', 'width'], {
-            easing: theme.transitions.easing.easeOut,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-    },
-    'appBarShift-left': {
-        marginLeft: drawerWidth,
-    },
-    'appBarShift-right': {
-        marginRight: drawerWidth,
-    },
     button: {
         display: 'block',
         minWidth: '2.8em',
@@ -113,48 +99,37 @@ const styles = {
     drawerPaper: {
         position: 'relative',
         height: '100%',
-        width: drawerWidth,
+        width: '100vw',
         boxShadow: 'inset 0 25em 4em -4em rgba(0,0,0,1)'
     },
 };
 
 class IndexMenu extends React.Component {
     state = {
-        open: false,
-        anchor: 'left',
+        left: false,
     };
 
-
-    handleDrawerOpen = () => {
-        this.setState({ open: true });
-    };
-    handleDrawerClose = () => {
-        this.setState({ open: false });
+    toggleDrawer = (side, open) => () => {
+        this.setState({
+            [side]: open,
+        });
     };
 
     render() {
         const { classes } = this.props;
-        const { anchor, open } = this.state;
 
-        const sideList = (
-            <div className={classes.list}>
-                <List>{mailFolderListItems}</List>
-                <Divider />
-                <List>{otherMailFolderListItems}</List>
-            </div>
-        );
         return (
             <MuiThemeProvider theme={theme}>
                 <div>
-                    <Button color="primary" className={classes.button} aria-label="open drawer" onClick={this.handleDrawerOpen}>
+                    <Button color="primary" className={classes.button} aria-label="open drawer" onClick={this.toggleDrawer('left', true)}>
                         <span className={classes.line} />
                         <span className={classes.line} />
                         <span className={classes.line} />
                     </Button>
-                    <Drawer variant="persistent" classes={{ paper: classes.drawerPaper, }} anchor={anchor} open={open}>
+                    <Drawer variant="persistent" classes={{ paper: classes.drawerPaper, }} open={this.state.left}>
                         <div>
                             <div className={classes.top}>
-                                <div className={classes.closet} onClick={this.handleDrawerClose}>
+                                <div className={classes.closet} onClick={this.toggleDrawer('left', false)}>
                                     <div className={classes.colorTwo} />
                                     <span className={classes.closetLineOne} />
                                     <span className={classes.closetLineTwo} />
