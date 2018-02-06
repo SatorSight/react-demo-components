@@ -17,11 +17,11 @@ const styles = {
     },
     tabsItem: {
         fontWeight: 200,
-        fontSize: '0.9em',
         color: '#FFF',
         letterSpacing: '0.3em',
-        padding: '2em 0',
-        height: '6.6em',
+        padding: '1em 0',
+        height: '5em',
+        fontSize: '1.2em',
     },
     activeItem: {
         color: '#999',
@@ -33,9 +33,10 @@ const styles = {
         right: 0,
         top: 0,
         height: '0.1em',
-        background: 'url("/images/arrow-h.svg") no-repeat 50% 50%',
+        background: 'url("../images/arrow-h.svg") no-repeat 50% 50%',
         backgroundSize: 'contain',
         opacity: 0.4,
+        display: 'block',
     },
     arrowBot:{
         position: 'absolute',
@@ -43,16 +44,17 @@ const styles = {
         right: 0,
         bottom: 0,
         height: '0.1em',
-        background: 'url("/images/arrow-h.svg") no-repeat 50% 50%',
+        background: 'url("../images/arrow-h.svg") no-repeat 50% 50%',
         backgroundSize: 'contain',
         opacity: 0.8,
+        display: 'block',
     },
 };
 const theme = createMuiTheme({
     typography: {
         fontFamily:'HelveticaNeueCyr, arial, serif',
         fontWeightMedium,
-        padding: 2,
+        fontSize: '1.8em',
         body1: {
             fontWeight: fontWeightMedium,
         },
