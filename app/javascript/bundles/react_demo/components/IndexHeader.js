@@ -75,7 +75,7 @@ const styles = {
         right: 0,
         bottom: 0,
         height: '0.1em',
-        background: 'url("../images/arrow-h.svg") no-repeat 50% 50%',
+        background: 'url("/images/arrow-h.svg") no-repeat 50% 50%',
         backgroundSize: 'contain',
         opacity: 0.6,
     },
