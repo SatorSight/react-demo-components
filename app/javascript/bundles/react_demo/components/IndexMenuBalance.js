@@ -1,105 +1,97 @@
 import React, { Component } from 'react';
-import Tabs, { Tab } from 'material-ui/Tabs';
-import { MuiThemeProvider, withStyles, createMuiTheme } from 'material-ui/styles';
-import SwipeableViews from 'react-swipeable-views';
-import IndexMenuShowcase from './IndexMenuShowcase';
-import IndexMenuBalance from './IndexMenuBalance';
-import IndexMenuSettings from './IndexMenuSettings';
-
-const fontWeightMedium = 400;
+import fixtures from './fixtures';
 
 const styles = {
     main: {
+        padding: '1.5em',
     },
-    tabs: {
+    item: {
+        padding: '0.5em 0 1.3em',
+        position: 'relative',
+        color: '#FFF',
+    },
+    ava: {
+        position: 'absolute',
+        left: 0,
+        top: '0.5em',
+        borderRadius: '0.5em',
+        width: '6.5em',
+        height: '8.5em',
+        overflow: 'hidden',
+        backgroundPosition: '50% 50%',
+        backgroundSize: 'cover',
+        boxShadow: '0.5em 0.5em 1em rgba(0,0,0,0.2)',
+    },
+    inner: {
+        marginLeft: '8em',
+    },
+    over: {
         position: 'relative',
         overflow: 'hidden',
+        height: '7.5em',
     },
-    tabsItem: {
-        fontWeight: 200,
+    caption: {
+        display: 'inline',
+        background: 'linear-gradient(to right, rgba(135,97,117,1) 0%, rgba(127,96,150,1) 100%)',
         color: '#FFF',
-        letterSpacing: '0.3em',
-        padding: '1em 0',
-        height: '5em',
-        fontSize: '1.2em',
+        borderRadius: '1em',
+        padding: '0.4em 0.7em 0.2em',
+        fontSize: '0.9em',
+        lineHeight: 2,
+        textTransform: 'uppercase',
+        fontWeight: 300,
     },
-    activeItem: {
+    title: {
+        fontSize: '1.4em',
+        lineHeight: 1.2,
+        fontWeight: 500,
+        marginBottom: '0.3em',
+        maxHeight: '2.2em',
+        letterSpacing: 1,
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        width: '75%',
+    },
+    text: {
+        fontSize: '1.1em',
+        lineHeight: 1.7,
+        maxHeight: '5.8em',
         color: '#999',
-        fontWeight: '300 !important',
-    },
-    arrowTop:{
-        position: 'absolute',
-        left: 0,
-        right: 0,
-        top: 0,
-        height: '0.1em',
-        background: 'url("../images/arrow-h.svg") no-repeat 50% 50%',
-        backgroundSize: 'contain',
-        opacity: 0.4,
-        display: 'block',
-    },
-    arrowBot:{
-        position: 'absolute',
-        left: 0,
-        right: 0,
-        bottom: 0,
-        height: '0.1em',
-        background: 'url("../images/arrow-h.svg") no-repeat 50% 50%',
-        backgroundSize: 'contain',
-        opacity: 0.8,
-        display: 'block',
+        overflow: 'hidden',
+        position: 'relative',
+        width: '90%',
+        background: 'linear-gradient(to bottom, rgba(153,153,153,1) 0%, rgba(153,153,153,0) 100%)',
+        backgroundClip: 'text',
+        webkitTextFillColor: 'transparent',
     },
 };
-const theme = createMuiTheme({
-    typography: {
-        fontFamily:'HelveticaNeueCyr, arial, serif',
-        fontWeightMedium,
-        fontSize: '1.8em',
-        body1: {
-            fontWeight: fontWeightMedium,
-        },
-    },
-});
-class IndexMenuTabs extends Component {
-    state = {
-        index: 0,
-    };
 
-    handleChange = (event, value) => {
-        this.setState({
-            index: value,
-        });
-    };
-
-    handleChangeIndex = index => {
-        this.setState({
-            index,
-        });
-    };
-
+class IndexMenuBalance extends Component {
     render() {
-        const { index } = this.state;
-
         return (
-            <MuiThemeProvider theme={theme}>
+            <div>
                 <div style={styles.main}>
-                    <Tabs indicatorColor="none" fullWidth value={index} onChange={this.handleChange} style={styles.tabs}>
-                        <Tab classes={{ rootInheritSelected: this.props.classes.activeItem}} label="витрина" style={styles.tabsItem} />
-                        <Tab classes={{ rootInheritSelected: this.props.classes.activeItem}} label="баланс" style={styles.tabsItem} />
-                        <Tab classes={{ rootInheritSelected: this.props.classes.activeItem}} label="настройки" style={styles.tabsItem} />
-                        <span style={styles.arrowTop} />
-                        <span style={styles.arrowBot} />
-                    </Tabs>
-
-                    <SwipeableViews animateHeight enableMouseEvents index={index} onChangeIndex={this.handleChangeIndex}>
-                        <IndexMenuShowcase />
-                        <IndexMenuBalance />
-                        <IndexMenuSettings />
-                    </SwipeableViews>
+                    {fixtures.map(fixture =>
+                        <div style={styles.item} key={fixture.id}>
+                            <div style={Object.assign({}, styles.ava, {backgroundImage:'url(' + fixture.cover_image + ')' })} />
+                            <div style={styles.inner}>
+                                <div style={styles.over}>
+                                    <h3 style={styles.title}>{fixture.title}</h3>
+                                    <p style={styles.text}>{fixture.text}</p>
+                                </div>
+                                <div>
+                                    <p style={styles.caption}>
+                                        <span>{fixture.name}, </span>
+                                        <span>{fixture.date}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
-            </MuiThemeProvider>
+            </div>
         );
     }
 }
 
-export default withStyles(styles)(IndexMenuTabs);
+export default IndexMenuBalance;

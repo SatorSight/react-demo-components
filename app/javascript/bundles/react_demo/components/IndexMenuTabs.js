@@ -92,8 +92,8 @@ class IndexMenuTabs extends Component {
                     </Tabs>
                     <SwipeableViews enableMouseEvents animateHeight index={index} onChangeIndex={this.handleChangeIndex}>
                         <IndexMenuShowcase />
-                        {/*<IndexMenuBalance />*/}
-                        {/*<IndexMenuSettings />*/}
+                        <IndexMenuBalance />
+                        <IndexMenuSettings />
                     </SwipeableViews>
                 </div>
             </MuiThemeProvider>
