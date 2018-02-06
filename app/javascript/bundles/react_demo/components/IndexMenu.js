@@ -139,7 +139,6 @@ class IndexMenu extends React.Component {
                                     <span />
                                 </div>
                             </div>
-                            <IndexMenuTabs />
                         </div>
                     </Drawer>
                 </div>
