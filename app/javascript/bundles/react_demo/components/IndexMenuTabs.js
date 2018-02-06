@@ -90,6 +90,11 @@ class IndexMenuTabs extends Component {
                         <span style={styles.arrowTop} />
                         <span style={styles.arrowBot} />
                     </Tabs>
+                    <SwipeableViews enableMouseEvents  index={index} onChangeIndex={this.handleChangeIndex}>
+                        <IndexMenuShowcase />
+                        <IndexMenuBalance />
+                        <IndexMenuSettings />
+                    </SwipeableViews>
                 </div>
             </MuiThemeProvider>
         );
