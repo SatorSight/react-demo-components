@@ -3,7 +3,10 @@ import fixtures from './fixtures';
 
 const styles = {
     main: {
-        padding: '1.5em',
+        padding: '0 2em',
+    },
+    tabs: {
+        background: '#fff',
     },
     item: {
         padding: '0.5em 0 1.3em',
@@ -23,7 +26,7 @@ const styles = {
         boxShadow: '0.5em 0.5em 1em rgba(0,0,0,0.2)',
     },
     inner: {
-        marginLeft: '8em',
+        marginLeft: '9em',
     },
     over: {
         position: 'relative',
@@ -32,7 +35,7 @@ const styles = {
     },
     caption: {
         display: 'inline',
-        background: 'linear-gradient(to right, rgba(104,216,181,1) 0%, rgba(113,133,238,1) 100%)',
+        backgroundColor: '#7E6092',
         color: '#FFF',
         borderRadius: '1em',
         padding: '0.4em 0.7em 0.2em',
@@ -42,12 +45,10 @@ const styles = {
         fontWeight: 300,
     },
     title: {
-        fontSize: '1.4em',
-        lineHeight: 1.2,
-        fontWeight: 500,
+        fontSize: '1.5em',
+        lineHeight: 1.1,
         marginBottom: '0.3em',
-        maxHeight: '2.2em',
-        letterSpacing: 1,
+        maxHeight: '2em',
         overflow: 'hidden',
         textOverflow: 'ellipsis',
         width: '75%',
@@ -60,19 +61,13 @@ const styles = {
         overflow: 'hidden',
         position: 'relative',
         width: '90%',
-    },
-    shadow: {
-        position: 'absolute',
-        left: 0,
-        bottom: 0,
-        width: '100%',
-        height: '50%',
-        zIndex: '10',
-        background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
+        background: 'linear-gradient(to bottom, rgba(153,153,153,1) 0%, rgba(153,153,153,0) 100%)',
+        backgroundClip: 'text',
+        webkitTextFillColor: 'transparent',
     },
 };
 
-class IndexMenuSettings extends Component {
+class PopularArticles extends Component {
     render() {
         return (
             <div>
@@ -84,6 +79,7 @@ class IndexMenuSettings extends Component {
                                 <div style={styles.over}>
                                     <h3 style={styles.title}>{fixture.title}</h3>
                                     <p style={styles.text}>{fixture.text}</p>
+                                    <span style={styles.shadow} />
                                 </div>
                                 <div>
                                     <p style={styles.caption}>
@@ -94,10 +90,13 @@ class IndexMenuSettings extends Component {
                             </div>
                         </div>
                     )}
+                    <div style={styles.fot}>
+                        <a href="#look" style={styles.button}>Загрузить еще</a>
+                    </div>
                 </div>
             </div>
         );
     }
 }
 
-export default IndexMenuSettings;
+export default PopularArticles;

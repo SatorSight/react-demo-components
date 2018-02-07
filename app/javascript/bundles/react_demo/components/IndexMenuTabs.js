@@ -19,9 +19,8 @@ const styles = {
         fontWeight: 200,
         color: '#FFF',
         letterSpacing: '0.3em',
-        padding: '1em 0 0.8em',
-        height: '5em',
-        fontSize: '1.2em',
+        padding: '2em 0',
+        height: '6.6em',
     },
     activeItem: {
         color: '#999',
@@ -54,7 +53,7 @@ const theme = createMuiTheme({
     typography: {
         fontFamily:'HelveticaNeueCyr, arial, serif',
         fontWeightMedium,
-        fontSize: '1.8em',
+        fontSize: '1.2em',
         body1: {
             fontWeight: fontWeightMedium,
         },
@@ -90,7 +89,8 @@ class IndexMenuTabs extends Component {
                         <span style={styles.arrowTop} />
                         <span style={styles.arrowBot} />
                     </Tabs>
-                    <SwipeableViews enableMouseEvents animateHeight index={index} onChangeIndex={this.handleChangeIndex}>
+
+                    <SwipeableViews enableMouseEvents index={index} onChangeIndex={this.handleChangeIndex}>
                         <IndexMenuShowcase />
                         <IndexMenuBalance />
                         <IndexMenuSettings />

@@ -47,15 +47,15 @@ const styles = {
         width: '100%',
         height: '100%',
         zIndex: 20,
-        background: 'radial-gradient(ellipse at center, rgba(0,125,192,1) 0%, rgba(19,83,186,1) 20%, rgba(58,0,174,0.2) 60%, rgba(58,0,174,0) 70%)',
+        background: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%)',
         opacity: 0.8,
     },
     colorTwo: {
         position: 'absolute',
         right: '-60%',
-        top: '-50%',
+        top: '-90%',
         width: '100%',
-        height: '100%',
+        height: '200%',
         zIndex: 30,
         background: 'radial-gradient(ellipse at center, rgba(172,168,165,1) 0%, rgba(115,112,110,1) 20%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 70%)',
     },
@@ -77,15 +77,24 @@ const styles = {
         zIndex: 30,
     },
     h1: {
-        fontSize: '2.1em',
+        fontSize: '1.2em',
         letterSpacing: '0.5em',
         textTransform: 'uppercase',
         color: '#FFF',
         fontWeight: 200,
         display: 'inline-block',
         padding: '0.7em 1.5em',
-        margin: '4.8em auto',
+        margin: '2.2em auto 4.5em',
         position: 'relative',
+        zIndex: 30,
+    },
+    span: {
+        fontSize: '1em',
+        letterSpacing: '0.1em',
+        color: '#666',
+        fontWeight: 400,
+        textAlign: 'center',
+        margin: '2em auto 4em',
         zIndex: 30,
     },
     arrow:{
@@ -106,7 +115,7 @@ const styles = {
         zIndex: 50,
     },
 };
-class IndexHeader extends Component {
+class IndexFooter extends Component {
     render() {
         return (
             <div style={styles.header}>
@@ -118,15 +127,12 @@ class IndexHeader extends Component {
                     <div style={styles.shadow} />
                 </div>
                 <div style={styles.inner}>
-                    <div style={styles.iconMenu}>
-                        <IndexMenu />
-                    </div>
                     <h1 style={styles.h1}>киоск плюс<span style={styles.arrow} /></h1>
+                    <p style={styles.span}>@Киоск плюс</p>
                 </div>
-                <IndexMenuSet />
             </div>
         );
     }
 }
 
-export default IndexHeader;
+export default IndexFooter;
