@@ -3,7 +3,7 @@ import fixtures from './fixtures';
 
 const styles = {
     main: {
-        padding: '0 2em',
+        padding: '0 1em',
     },
     tabs: {
         background: '#fff',
@@ -22,62 +22,39 @@ const styles = {
         overflow: 'hidden',
         backgroundPosition: '50% 50%',
         backgroundSize: 'cover',
-        boxShadow: '0.5em 0.5em 1em rgba(0,0,0,0.2)',
+        boxShadow: '0.2em 0.2em 0.8em rgba(0,0,0,0.3)',
     },
     inner: {
-        marginLeft: '9em',
+        marginLeft: '8.5em',
+        height: '6.5em',
     },
     over: {
         position: 'relative',
         overflow: 'hidden',
-        height: '7.5em',
     },
     caption: {
         display: 'inline',
-        backgroundColor: '#7E6092',
+        background: 'linear-gradient(to right, rgba(104,216,181,1) 0%, rgba(113,133,238,1) 100%)',
         color: '#FFF',
         borderRadius: '1em',
-        padding: '0.4em 0.7em 0.2em',
+        padding: '0.3em 1em 0.1em',
         fontSize: '0.9em',
-        lineHeight: 2,
         textTransform: 'uppercase',
         fontWeight: 300,
     },
     title: {
-        fontSize: '1.5em',
-        lineHeight: 1.1,
-        marginBottom: '0.3em',
-        maxHeight: '2em',
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        width: '75%',
-    },
-    text: {
-        fontSize: '1.1em',
-        lineHeight: 1.7,
-        maxHeight: '5.8em',
+        fontSize: '1.2em',
+        lineHeight: 1.4,
+        marginBottom: '0.5em',
+        maxHeight: '4em',
         color: '#333',
         overflow: 'hidden',
         position: 'relative',
-        width: '90%',
-    },
-    shadow: {
-        position: 'absolute',
-        left: 0,
-        bottom: 0,
-        width: '100%',
-        height: '70%',
-        zIndex: '10',
-        background: 'rgba(255,255,255,0)',
-        background: '-moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)',
-        background: '-webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,1)))',
-        background: '-webkit-linear-gradient(top, rgba(255,255,2000055,0) 0%, rgba(255,255,255,1) 100%)',
-        background: '-o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)',
-        background: '-ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)',
-        background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)',
+        width: '70%',
+        fontWeight: 400,
     },
     fot: {
-        padding: '0.5em 0.5em 2em',
+        padding: '0.5em 0 2em',
         textAlign: 'center',
         position: 'relative',
         zIndex: 20,
@@ -111,9 +88,7 @@ class PopularArticles extends Component {
                             <div style={Object.assign({}, styles.ava, {backgroundImage:'url(' + fixture.cover_image + ')' })} />
                             <div style={styles.inner}>
                                 <div style={styles.over}>
-                                    <h3 style={styles.title}>{fixture.title}</h3>
-                                    <p style={styles.text}>{fixture.text}</p>
-                                    <span style={styles.shadow} />
+                                    <p style={styles.title}>{fixture.title}</p>
                                 </div>
                                 <div>
                                     <p style={styles.caption}>
