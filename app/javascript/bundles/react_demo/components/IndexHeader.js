@@ -7,6 +7,7 @@ const styles = {
     header: {
         width: '100%',
         position: 'relative',
+        background: '#000',
     },
     mask: {
         position: 'absolute',

@@ -3,17 +3,17 @@ import SwipeableViews from 'react-swipeable-views';
 
 const styles = {
     swiper: {
-        padding: '0 10%',
+        padding: '0 12%',
         zIndex: 20,
         position: 'relative',
     },
     item: {
-        margin: '2em 1em 3em',
-        height: '10em',
+        margin: '2em 0.7em 6em',
+        height: '12em',
         position: 'relative',
         overflow: 'hidden',
         borderRadius: '1em',
-        boxShadow: '0 1em 5em -3em rgba(0,0,0,1)',
+        boxShadow: '0 2em 3em -1.5em rgba(0,0,0,0.8)',
     },
     mask: {
         zIndex: 20,
@@ -35,18 +35,16 @@ const styles = {
         zIndex: 10,
     },
     logo: {
-        width: '80%',
+        width: '50%',
         height: '50%',
         position: 'absolute',
-        left: '10%',
+        left: '25%',
         top: '25%',
         zIndex: 50,
         textAlign: 'center',
-    },
-    logoImg: {
-        height: '100%',
-        width: 'auto',
-        pointerEvents: 'none',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: '50% 50%',
+        backgroundSize: 'contain',
     },
 };
 
@@ -57,14 +55,12 @@ class PopularMain extends React.Component {
 
     render() {
         return (
-            <SwipeableViews style={styles.swiper} enableMouseEvents index={this.props.active} onSwitching={this.props.changer}>
+            <SwipeableViews style={styles.swiper} enableMouseEvents index={this.props.active} onChangeIndex={this.props.changer} onSwitching={this.props.changer}>
                 {this.props.fixtures.map((fixture, index) =>
                     <div style={styles.item} key={index}>
                         <div style={styles.mask} />
                         <img style={styles.img} src={fixture.main_image} alt={fixture.title} />
-                        <div style={styles.logo}>
-                            <img style={styles.logoImg} src={fixture.logo} alt={fixture.title} />
-                        </div>
+                        <div style={Object.assign({}, styles.logo, {backgroundImage:'url(' + fixture.logo + ')' })} />
                     </div>
                 )}
             </SwipeableViews>

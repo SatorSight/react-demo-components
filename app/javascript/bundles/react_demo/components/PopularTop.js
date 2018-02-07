@@ -12,7 +12,7 @@ const styles = {
     },
     item: {
         width: '100%',
-        height: '15em',
+        height: '20em',
         overflow: 'hidden',
         position: 'relative',
     },
@@ -22,8 +22,8 @@ const styles = {
         right: 0,
         left: 0,
         bottom: 0,
-        boxShadow: 'inset 0 0 5em 5em rgba(245,245,245,1)',
         zIndex: 30,
+        background: 'radial-gradient(ellipse at center, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 70%)',
     },
     bg: {
         width: '100%',
@@ -42,7 +42,7 @@ class PopularTop extends React.Component {
     }
     render() {
         return (
-            <SwipeableViews style={styles.swiper} enableMouseEvents index={this.props.active} onSwitching={this.props.changer}>
+            <SwipeableViews style={styles.swiper} enableMouseEvents index={this.props.active} onChangeIndex={this.props.changer} onSwitching={this.props.changer}>
                 {this.props.fixtures.map(fixture =>
                     <div style={styles.item} key={fixture.id}>
                         <div style={styles.mask} />

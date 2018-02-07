@@ -4,9 +4,10 @@ import IndexMenu from './IndexMenu';
 import IndexMenuSet from './IndexMenuSet';
 
 const styles = {
-    header: {
+    footer: {
         width: '100%',
         position: 'relative',
+        background: '#000',
     },
     mask: {
         position: 'absolute',
@@ -118,7 +119,7 @@ const styles = {
 class IndexFooter extends Component {
     render() {
         return (
-            <div style={styles.header}>
+            <div style={styles.footer}>
                 <div style={styles.mask}>
                     <div style={Object.assign({}, styles.bg, {backgroundImage:'url(' + fixtures[0].cover_image + ')' })} />
                     <div style={styles.colorOne} />
