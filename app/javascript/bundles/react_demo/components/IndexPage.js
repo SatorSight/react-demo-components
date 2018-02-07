@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, { Component } from "react";
 import IndexHeader from './IndexHeader';
 import NewIssues from './NewIssues';
 import MainTopics from './MainTopics';
