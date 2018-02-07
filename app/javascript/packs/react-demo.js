@@ -8,7 +8,7 @@ import PopularJournalsSwiper from '../bundles/react_demo/components/PopularJourn
 import IssuesTheme from '../bundles/react_demo/components/IssuesTheme';
 import IndexHeader from '../bundles/react_demo/components/IndexHeader';
 import IndexFooter from '../bundles/react_demo/components/IndexFooter';
-import Index from '../bundles/react_demo/components/index';
+import IndexPage from '../bundles/react_demo/components/IndexPage';
 
 ReactOnRails.register({
     IndexHeader,
@@ -20,5 +20,5 @@ ReactOnRails.register({
     PopularJournalsSwiper,
     IssuesTheme,
     IndexFooter,
-    Index
+    IndexPage
 });
