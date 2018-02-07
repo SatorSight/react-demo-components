@@ -6,7 +6,7 @@ import NextArticle from '../bundles/react_demo/components/NextArticle';
 import Article from '../bundles/react_demo/components/Article';
 import PopularJournalsSwiper from '../bundles/react_demo/components/PopularJournalsSwiper';
 import IssuesTheme from '../bundles/react_demo/components/IssuesTheme';
-import IndexPage from '../bundles/react_demo/components/IndexPage';
+// import IndexPage from '../bundles/react_demo/components/IndexPage';
 
 ReactOnRails.register({
     IssuesSwiper,
@@ -15,6 +15,5 @@ ReactOnRails.register({
     OtherIssues,
     Article,
     PopularJournalsSwiper,
-    IssuesTheme,
-    IndexPage
+    IssuesTheme
 });
