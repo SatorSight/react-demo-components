@@ -7,7 +7,7 @@ import MainTabs from './MainTabs';
 import PopularJournals from './PopularJournals';
 import IndexFooter from './IndexFooter';
 
-class IndexFooter extends Component {
+class Index extends Component {
     render() {
         return (
             <div>
@@ -22,4 +22,4 @@ class IndexFooter extends Component {
     }
 }
 
-export default IndexFooter;
+export default Index;
