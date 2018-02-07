@@ -64,6 +64,7 @@ const styles = {
         background: 'linear-gradient(to bottom, rgba(153,153,153,1) 0%, rgba(153,153,153,0) 100%)',
         backgroundClip: 'text',
         webkitTextFillColor: 'transparent',
+        webkitBackgroundClip: 'text',
     },
 };
 
