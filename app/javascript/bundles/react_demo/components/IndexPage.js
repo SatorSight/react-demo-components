@@ -1,11 +1,11 @@
 import React from 'react';
 
-import IndexHeader from '/IndexHeader';
-import NewIssues from '/NewIssues';
-import MainTopics from '/MainTopics';
-import MainTabs from '/MainTabs';
-import PopularJournals from '/PopularJournals';
-import IndexFooter from '/IndexFooter';
+import IndexHeader from './IndexHeader';
+import NewIssues from './NewIssues';
+import MainTopics from './MainTopics';
+import MainTabs from './MainTabs';
+import PopularJournals from './PopularJournals';
+import IndexFooter from './IndexFooter';
 
 class IndexPage extends Component {
     render() {
