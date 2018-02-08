@@ -8,11 +8,11 @@ const theme = createMuiTheme({
     palette: {
         type: 'dark',
         background: {
-            default: 'rgba(0,0,0,0.5)',
-            paper: 'rgba(0,0,0,0.5)',
-            appBar: 'rgba(0,0,0,0.5)',
-            contentFrame: 'rgba(0,0,0,0.5)',
-            chip:'rgba(0,0,0,0.5)',
+            default: 'rgba(0,0,0,0.8)',
+            paper: 'rgba(0,0,0,0.8)',
+            appBar: 'rgba(0,0,0,0.8)',
+            contentFrame: 'rgba(0,0,0,0.8)',
+            chip:'rgba(0,0,0,0.8)',
         },
     },
 });
@@ -41,6 +41,12 @@ const styles = {
         textAlign: 'center',
         overflow: 'hidden',
         position: 'relative',
+    },
+    inner: {
+        maxWidth: '50em',
+        margin: '0 auto',
+        position: 'relative',
+        width: '100%',
     },
     topText: {
         fontSize: '1.6em',
@@ -85,13 +91,13 @@ const styles = {
     },
     colorTwo: {
         position: 'absolute',
-        bottom: '-1em',
-        right: '-3em',
+        top: '-5em',
+        left: '-5.5em',
         width: '15em',
         height: '15em',
         zIndex: 10,
         background: 'radial-gradient(ellipse at center, rgba(172,168,165,1) 0%, rgba(115,112,110,1) 20%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 70%)',
-        opacity: 0.6,
+        opacity: 0.4,
     },
     drawerPaper: {
         position: 'relative',
@@ -127,10 +133,10 @@ class IndexMenu extends React.Component {
                         <span className={classes.line} />
                     </Button>
                     <Drawer classes={{ paper: classes.drawerPaper, }} open={this.state.left} onClose={this.toggleDrawer('left', false)}>
-                        <div>
+                        <div className={classes.inner} >
+                            <div className={classes.colorTwo} />
                             <div className={classes.top}>
                                 <div className={classes.closet} onClick={this.toggleDrawer('left', false)}>
-                                    <div className={classes.colorTwo} />
                                     <span className={classes.closetLineOne} />
                                     <span className={classes.closetLineTwo} />
                                 </div>
