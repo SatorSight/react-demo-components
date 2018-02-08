@@ -49,6 +49,7 @@ const styles = {
     infoSwiper: {
         position: 'relative',
         padding: '1.5em 2em 1em 10em',
+        height: '7em',
     },
     textSwiper: {
         fontSize: '1.2em',
