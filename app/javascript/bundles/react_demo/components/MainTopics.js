@@ -73,7 +73,7 @@ const styles = {
     },
     captionColorSwiper: {
         display: 'inline',
-        fontWeight: 200,
+        fontWeight: 300,
         letterSpacing: '0.1em',
         background: 'linear-gradient(to right, rgba(104,216,181,1) 0%, rgba(113,133,238,1) 100%)',
         color: '#FFF',
