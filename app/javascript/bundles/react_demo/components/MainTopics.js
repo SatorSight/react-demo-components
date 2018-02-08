@@ -7,6 +7,8 @@ const styles = {
     root: {
         position: 'relative',
         backgroundColor: '#FFF',
+        width: '100%',
+        overflowX: 'hidden'
     },
     title: {
         fontSize: '1.2em',
@@ -18,6 +20,8 @@ const styles = {
     },
     swiper: {
         padding: '0 2.5em 0 1em',
+        overflowX: 'none',
+        maxWidth: '50em',
     },
     mainSwiper: {
         position: 'relative',

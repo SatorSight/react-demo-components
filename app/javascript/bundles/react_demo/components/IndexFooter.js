@@ -93,7 +93,7 @@ const styles = {
         fontSize: '1em',
         letterSpacing: '0.1em',
         color: '#666',
-        fontWeight: 400,
+        fontWeight: 300,
         textAlign: 'center',
         margin: '2em auto 4em',
         zIndex: 30,
