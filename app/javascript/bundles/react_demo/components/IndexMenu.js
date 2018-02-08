@@ -95,9 +95,9 @@ const styles = {
         left: '-5.5em',
         width: '15em',
         height: '15em',
-        zIndex: 10,
         background: 'radial-gradient(ellipse at center, rgba(172,168,165,1) 0%, rgba(115,112,110,1) 20%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 70%)',
         opacity: 0.4,
+        zIndex: '-1',
     },
     drawerPaper: {
         position: 'relative',
