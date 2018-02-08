@@ -32,7 +32,7 @@ const styles = {
     },
     caption: {
         display: 'inline',
-        background: 'linear-gradient(to right, rgba(135,97,117,1) 0%, rgba(127,96,150,1) 100%)',
+        background: 'linear-gradient(to right, rgba(104,216,181,1) 0%, rgba(113,133,238,1) 100%)',
         color: '#FFF',
         borderRadius: '1em',
         padding: '0.4em 0.7em 0.2em',
@@ -62,8 +62,7 @@ const styles = {
         width: '90%',
         background: 'linear-gradient(to bottom, rgba(153,153,153,1) 0%, rgba(153,153,153,0) 100%)',
         backgroundClip: 'text',
-        webkitTextFillColor: 'transparent',
-        webkitBackgroundClip: 'text',
+        webkitTextFillColor: 'transparent'
     },
 };
 

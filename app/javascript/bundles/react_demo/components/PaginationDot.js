@@ -12,14 +12,14 @@ const styles = {
         display: 'inline',
     },
     dot: {
-        border: '0.5px solid #7E6092',
+        border: '0.5px solid #6DA8D6',
         height: 5,
         width: 5,
         borderRadius: 5,
         margin: 1,
     },
     active: {
-        backgroundColor: '#7E6092',
+        backgroundColor: '#6DA8D6',
     },
 };
 

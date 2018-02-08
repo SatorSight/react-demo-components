@@ -35,7 +35,7 @@ const styles = {
     },
     caption: {
         display: 'inline',
-        backgroundColor: '#7E6092',
+        background: 'linear-gradient(to right, rgba(104,216,181,1) 0%, rgba(113,133,238,1) 100%)',
         color: '#FFF',
         borderRadius: '1em',
         padding: '0.4em 0.7em 0.2em',
@@ -64,7 +64,6 @@ const styles = {
         background: 'linear-gradient(to bottom, rgba(153,153,153,1) 0%, rgba(153,153,153,0) 100%)',
         backgroundClip: 'text',
         webkitTextFillColor: 'transparent',
-        webkitBackgroundClip: 'text',
     },
 };
 
@@ -91,9 +90,6 @@ class PopularArticles extends Component {
                             </div>
                         </div>
                     )}
-                    <div style={styles.fot}>
-                        <a href="#look" style={styles.button}>Загрузить еще</a>
-                    </div>
                 </div>
             </div>
         );

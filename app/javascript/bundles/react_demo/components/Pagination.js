@@ -4,10 +4,10 @@ import PaginationDot from './PaginationDot';
 const styles = {
     root: {
         position: 'absolute',
-        width: '21%',
+        width: '7em',
         textAlign: 'center',
-        bottom: 25,
-        left: '1.5em',
+        bottom: '1.5em',
+        left: '2em',
         flexDirection: 'row',
     },
 };

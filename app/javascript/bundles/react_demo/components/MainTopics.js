@@ -39,16 +39,16 @@ const styles = {
         backgroundSize: 'cover',
     },
     magSwiper: {
-        width: '21%',
+        width: '7em',
         boxShadow: '0 0 1em rgba(0,0,0,0.2)',
         borderRadius: '0.2em',
         position: 'absolute',
-        left: '3%',
+        left: '1em',
         bottom: '3em',
     },
     infoSwiper: {
         position: 'relative',
-        padding: '4% 7% 3% 30%',
+        padding: '1.5em 2em 1em 10em',
     },
     textSwiper: {
         fontSize: '1.2em',
@@ -64,7 +64,7 @@ const styles = {
     captionSwiper: {
         overflow: 'hidden',
         width: '100%',
-        margin: '10px 0',
+        margin: '1em 0',
         opacity: 0,
     },
     captionSwiperactive: {
