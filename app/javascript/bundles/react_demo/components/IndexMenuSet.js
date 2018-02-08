@@ -11,6 +11,8 @@ const styles = {
         background: 'url("/images/arrow-left.svg") no-repeat 0 50%',
         backgroundSize: 'contain',
         zIndex: 50,
+        height: '3.5em',
+        overflow: 'hidden',
     },
     url: {
         textDecoration: 'none',
