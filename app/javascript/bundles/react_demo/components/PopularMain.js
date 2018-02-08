@@ -6,6 +6,9 @@ const styles = {
         padding: '0 12%',
         zIndex: 20,
         position: 'relative',
+        maxWidth: '40em',
+        overflowX: 'none',
+        margin: '0 auto',
     },
     item: {
         margin: '2em 0.7em 6em',
